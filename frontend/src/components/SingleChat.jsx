@@ -11,7 +11,7 @@ import ScrollableChat from "./ScrollableChat";
 import io from "socket.io-client";
 // import animationData from "../animations/typing.json";
 
-const ENDPOINT = "http://localhost:4000"; 
+const ENDPOINT = "https://sms2-wn9w.onrender.com/"; 
 let socket,selectedChatCompare;
 
 const SingleChat = () => {
@@ -47,7 +47,7 @@ const SingleChat = () => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `http://localhost:4000/api/message/fatchsingleChat/${selectedChat._id}`,
+        `https://sms2-wn9w.onrender.com/api/message/fatchsingleChat/${selectedChat._id}`,
         config
       );
 
@@ -83,7 +83,7 @@ const sendMessage=async(event)=>{
      
      setNewMessage("");
       const { data } = await axios.post(
-        "http://localhost:4000/api/message/createNewMessage",
+        "https://sms2-wn9w.onrender.com/api/message/createNewMessage",
         {
           content: newMessage,
           chatId: selectedChat._id,

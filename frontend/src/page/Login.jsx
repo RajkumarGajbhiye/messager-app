@@ -49,7 +49,7 @@ const Login = () => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:4000/api/user/login",
+        "https://sms2-wn9w.onrender.com/api/user/login",
         { email, password },
         config
       );

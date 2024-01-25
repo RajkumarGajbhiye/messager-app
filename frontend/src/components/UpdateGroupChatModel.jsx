@@ -44,7 +44,7 @@ const handleRemove= async(user1)=>{
       },
     };
     const { data } = await axios.patch(
-      `http://localhost:4000/api/groupremove`,
+      `https://sms2-wn9w.onrender.com/api/groupremove`,
       {
         chatId: selectedChat._id,
         userId: user1._id,
@@ -102,7 +102,7 @@ const handleAddUser = async (user1) => {
       },
     };
     const { data } = await axios.patch(
-      `http://localhost:4000/api/groupadd`,
+      `https://sms2-wn9w.onrender.com/api/groupadd`,
       {
         chatId: selectedChat._id,
         userId: user1._id,
@@ -137,7 +137,7 @@ try{
       Authorization : `Bearer ${user.token}`
     },
   };
-  const {data} = await axios.patch("http://localhost:4000/api/grouprename",{
+  const {data} = await axios.patch("https://sms2-wn9w.onrender.com/api/grouprename",{
     chatId:selectedChat._id,
     chatName:groupChatName
   },config);
@@ -176,7 +176,7 @@ const handleSearch=async(query)=>{
     };
 
     const { data } = await axios.get(
-      `http://localhost:4000/api/user/alluser?search=${search}`,
+      `https://sms2-wn9w.onrender.com/api/user/alluser?search=${search}`,
       config
     );
     console.log(data);

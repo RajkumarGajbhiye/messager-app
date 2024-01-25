@@ -104,7 +104,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:4000/api/user/register",
+        "https://sms2-wn9w.onrender.com/api/user/register",
         { name, email, password, pic },
         config
       );

@@ -62,7 +62,7 @@ const SideDrawer = () => {
         },
       };
       const { data } = await axios.get(
-        `http://localhost:4000/api/user/alluser?search=${search}`,
+        `https://sms2-wn9w.onrender.com/api/user/alluser?search=${search}`,
         config
       );
 
@@ -99,7 +99,7 @@ const SideDrawer = () => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:4000/api/chat",
+        "https://sms2-wn9w.onrender.com/api/chat",
         { userId },
         config
       );
